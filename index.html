@@ -6,26 +6,326 @@
   <title>agent_souls</title>
   <style>
     :root { color-scheme: light dark; }
-    body { font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 2rem auto; max-width: 900px; line-height: 1.6; padding: 0 1rem; }
+    body {
+      font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      margin: 2rem auto;
+      max-width: 1100px;
+      line-height: 1.6;
+      padding: 0 1rem 2rem;
+    }
     h1 { margin-bottom: 0.2rem; }
     .muted { opacity: 0.8; }
-    ul { padding-left: 1.2rem; }
+    .toolbar {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      margin: 1.25rem 0 1.75rem;
+    }
+    select {
+      padding: 0.35rem 0.55rem;
+      border-radius: 0.4rem;
+      border: 1px solid #7777;
+      background: transparent;
+      color: inherit;
+    }
+    .link-row {
+      margin: 0.5rem 0 1.5rem;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .table-card {
+      border: 1px solid #7774;
+      border-radius: 0.7rem;
+      padding: 0.9rem;
+      margin: 1rem 0;
+      overflow-x: auto;
+    }
+    .table-title {
+      margin: 0 0 0.55rem;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      min-width: 520px;
+    }
+    th, td {
+      border: 1px solid #7774;
+      padding: 0.45rem 0.55rem;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { font-weight: 600; }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.92em;
+    }
+    .error {
+      border: 1px solid #d66;
+      border-radius: 0.6rem;
+      padding: 0.75rem;
+      color: #b00;
+      margin-top: 0.75rem;
+    }
   </style>
 </head>
 <body>
   <h1>agent_souls</h1>
-  <p class="muted">定义智能体灵魂的标准选项集（性格特点 / 工作态度 / 沟通风格）。</p>
+  <p id="subtitle" class="muted"></p>
 
-  <h2>Data Files</h2>
-  <ul>
-    <li><a href="./personality_traits.json">personality_traits.json</a></li>
-    <li><a href="./work_attitudes.json">work_attitudes.json</a></li>
-    <li><a href="./communication_styles.json">communication_styles.json</a></li>
-  </ul>
+  <div class="toolbar">
+    <label for="lang-select" id="lang-label"></label>
+    <select id="lang-select"></select>
+  </div>
 
-  <h2>Documentation</h2>
-  <ul>
-    <li><a href="./README.md">README.md</a></li>
-  </ul>
+  <div class="link-row">
+    <a href="./README.md">README.md</a>
+  </div>
+
+  <div id="tables-root"></div>
+
+  <script>
+    const STORAGE_KEY = "agent_souls_language";
+    const SUPPORTED_LANGS = ["en", "zh", "ja", "fr", "es", "de"];
+    const LANG_LABELS = {
+      en: "English",
+      zh: "中文",
+      ja: "日本語",
+      fr: "Français",
+      es: "Español",
+      de: "Deutsch"
+    };
+
+    const UI = {
+      en: {
+        subtitle: "Standard option sets for defining an agent soul (personality traits / work attitudes / communication styles).",
+        langLabel: "Display language:",
+        key: "Key",
+        value: "Label",
+        count: "items",
+        loading: "Loading data...",
+        loadError: "Failed to load data files."
+      },
+      zh: {
+        subtitle: "定义智能体灵魂的标准选项集（性格特点 / 工作态度 / 沟通风格）。",
+        langLabel: "显示语言：",
+        key: "键名",
+        value: "名称",
+        count: "项",
+        loading: "正在加载数据...",
+        loadError: "加载数据文件失败。"
+      },
+      ja: {
+        subtitle: "エージェントの魂を定義する標準オプションセット（性格特性 / 仕事への姿勢 / コミュニケーションスタイル）。",
+        langLabel: "表示言語：",
+        key: "キー",
+        value: "表示名",
+        count: "件",
+        loading: "データを読み込み中...",
+        loadError: "データファイルの読み込みに失敗しました。"
+      },
+      fr: {
+        subtitle: "Jeux d'options standard pour définir l'âme d'un agent (traits de personnalité / attitudes de travail / styles de communication).",
+        langLabel: "Langue d'affichage :",
+        key: "Clé",
+        value: "Libellé",
+        count: "éléments",
+        loading: "Chargement des données...",
+        loadError: "Échec du chargement des fichiers de données."
+      },
+      es: {
+        subtitle: "Conjuntos estándar para definir el alma de un agente (rasgos de personalidad / actitudes de trabajo / estilos de comunicación).",
+        langLabel: "Idioma de visualización:",
+        key: "Clave",
+        value: "Etiqueta",
+        count: "elementos",
+        loading: "Cargando datos...",
+        loadError: "No se pudieron cargar los archivos de datos."
+      },
+      de: {
+        subtitle: "Standard-Optionssätze zur Definition der Agenten-Seele (Persönlichkeitsmerkmale / Arbeitshaltungen / Kommunikationsstile).",
+        langLabel: "Anzeigesprache:",
+        key: "Schlüssel",
+        value: "Bezeichnung",
+        count: "Einträge",
+        loading: "Daten werden geladen...",
+        loadError: "Daten-Dateien konnten nicht geladen werden."
+      }
+    };
+
+    const DATASETS = [
+      {
+        id: "personality",
+        file: "personality_traits.json",
+        title: {
+          en: "Personality Traits",
+          zh: "性格特点",
+          ja: "性格特性",
+          fr: "Traits de personnalité",
+          es: "Rasgos de personalidad",
+          de: "Persönlichkeitsmerkmale"
+        }
+      },
+      {
+        id: "attitudes",
+        file: "work_attitudes.json",
+        title: {
+          en: "Work Attitudes",
+          zh: "工作态度",
+          ja: "仕事への姿勢",
+          fr: "Attitudes de travail",
+          es: "Actitudes de trabajo",
+          de: "Arbeitshaltungen"
+        }
+      },
+      {
+        id: "styles",
+        file: "communication_styles.json",
+        title: {
+          en: "Communication Styles",
+          zh: "沟通风格",
+          ja: "コミュニケーションスタイル",
+          fr: "Styles de communication",
+          es: "Estilos de comunicación",
+          de: "Kommunikationsstile"
+        }
+      }
+    ];
+
+    const tablesRoot = document.getElementById("tables-root");
+    const langSelect = document.getElementById("lang-select");
+    const subtitleEl = document.getElementById("subtitle");
+    const langLabelEl = document.getElementById("lang-label");
+
+    const state = {
+      lang: "zh",
+      data: {}
+    };
+
+    function getInitialLang() {
+      const stored = localStorage.getItem(STORAGE_KEY);
+      if (SUPPORTED_LANGS.includes(stored)) return stored;
+      const browser = (navigator.language || "en").slice(0, 2).toLowerCase();
+      if (SUPPORTED_LANGS.includes(browser)) return browser;
+      return "zh";
+    }
+
+    function textFor(lang) {
+      return UI[lang] || UI.zh;
+    }
+
+    function escapeHtml(str) {
+      return String(str)
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#39;");
+    }
+
+    function buildLanguageSelector() {
+      langSelect.innerHTML = SUPPORTED_LANGS
+        .map((lang) => `<option value="${lang}">${escapeHtml(LANG_LABELS[lang])}</option>`)
+        .join("");
+      langSelect.value = state.lang;
+      langSelect.addEventListener("change", () => {
+        state.lang = langSelect.value;
+        localStorage.setItem(STORAGE_KEY, state.lang);
+        render();
+      });
+    }
+
+    function renderLoading() {
+      const t = textFor(state.lang);
+      subtitleEl.textContent = t.subtitle;
+      langLabelEl.textContent = t.langLabel;
+      tablesRoot.innerHTML = `<p class="muted">${escapeHtml(t.loading)}</p>`;
+    }
+
+    function renderError() {
+      const t = textFor(state.lang);
+      subtitleEl.textContent = t.subtitle;
+      langLabelEl.textContent = t.langLabel;
+      tablesRoot.innerHTML = `<div class="error">${escapeHtml(t.loadError)}</div>`;
+    }
+
+    function renderTable(dataset, rows, lang) {
+      const t = textFor(lang);
+      const title = dataset.title[lang] || dataset.title.en;
+      const body = rows
+        .map((item) => {
+          const translated = (item.aliases && item.aliases[lang]) || "";
+          return `
+            <tr>
+              <td><code>${escapeHtml(item.key)}</code></td>
+              <td>${escapeHtml(translated)}</td>
+            </tr>`;
+        })
+        .join("");
+
+      return `
+        <section class="table-card">
+          <h2 class="table-title">
+            <span>${escapeHtml(title)}</span>
+            <small class="muted">${rows.length} ${escapeHtml(t.count)}</small>
+          </h2>
+          <table>
+            <thead>
+              <tr>
+                <th>${escapeHtml(t.key)}</th>
+                <th>${escapeHtml(t.value)} (${escapeHtml(LANG_LABELS[lang])})</th>
+              </tr>
+            </thead>
+            <tbody>${body}</tbody>
+          </table>
+        </section>
+      `;
+    }
+
+    function render() {
+      const t = textFor(state.lang);
+      subtitleEl.textContent = t.subtitle;
+      langLabelEl.textContent = t.langLabel;
+      tablesRoot.innerHTML = DATASETS
+        .map((dataset) => renderTable(dataset, state.data[dataset.id] || [], state.lang))
+        .join("");
+    }
+
+    async function loadData() {
+      const entries = await Promise.all(
+        DATASETS.map(async (dataset) => {
+          const res = await fetch(`./${dataset.file}`, { cache: "no-store" });
+          if (!res.ok) {
+            throw new Error(`${dataset.file}: ${res.status}`);
+          }
+          const json = await res.json();
+          return [dataset.id, json];
+        })
+      );
+      state.data = Object.fromEntries(entries);
+    }
+
+    async function boot() {
+      state.lang = getInitialLang();
+      buildLanguageSelector();
+      renderLoading();
+      try {
+        await loadData();
+        render();
+      } catch (error) {
+        console.error(error);
+        renderError();
+      }
+    }
+
+    boot();
+  </script>
 </body>
 </html>
