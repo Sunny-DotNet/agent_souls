@@ -1,0 +1,82 @@
+[
+  {
+    "key": "accountable",
+    "aliases": { "en": "Accountable", "zh": "有责任心的", "ja": "責任感のある", "fr": "Responsable", "es": "Responsable", "de": "Verantwortungsbewusst" }
+  },
+  {
+    "key": "autonomous",
+    "aliases": { "en": "Autonomous", "zh": "自主性强的", "ja": "自主的な", "fr": "Autonome", "es": "Autónomo", "de": "Autonom" }
+  },
+  {
+    "key": "collaborative",
+    "aliases": { "en": "Collaborative", "zh": "注重协作的", "ja": "協調的な", "fr": "Collaboratif", "es": "Colaborativo", "de": "Kollaborativ" }
+  },
+  {
+    "key": "dedicated",
+    "aliases": { "en": "Dedicated", "zh": "敬业的", "ja": "献身的な", "fr": "Dévoué", "es": "Dedicado", "de": "Engagiert" }
+  },
+  {
+    "key": "detail_oriented",
+    "aliases": { "en": "Detail-oriented", "zh": "注重细节的", "ja": "細部にこだわる", "fr": "Minutieux", "es": "Detallista", "de": "Detailorientiert" }
+  },
+  {
+    "key": "diligent",
+    "aliases": { "en": "Diligent", "zh": "勤奋的", "ja": "勤勉な", "fr": "Diligent", "es": "Diligente", "de": "Fleißig" }
+  },
+  {
+    "key": "disciplined",
+    "aliases": { "en": "Disciplined", "zh": "纪律严明的", "ja": "規律正しい", "fr": "Discipliné", "es": "Disciplinado", "de": "Diszipliniert" }
+  },
+  {
+    "key": "flexible",
+    "aliases": { "en": "Flexible", "zh": "变通的/灵活的", "ja": "柔軟な", "fr": "Flexible", "es": "Flexible", "de": "Flexibel" }
+  },
+  {
+    "key": "innovative",
+    "aliases": { "en": "Innovative", "zh": "勇于创新的", "ja": "革新的な", "fr": "Innovant", "es": "Innovador", "de": "Innovativ" }
+  },
+  {
+    "key": "methodical",
+    "aliases": { "en": "Methodical", "zh": "有条理的", "ja": "几帳面な", "fr": "Méthodique", "es": "Metódico", "de": "Methodisch" }
+  },
+  {
+    "key": "optimistic",
+    "aliases": { "en": "Optimistic", "zh": "乐观积极的", "ja": "楽観的な", "fr": "Optimiste", "es": "Optimista", "de": "Optimistisch" }
+  },
+  {
+    "key": "persistent",
+    "aliases": { "en": "Persistent", "zh": "锲而不舍的", "ja": "粘り強い", "fr": "Persévérant", "es": "Persistente", "de": "Beharrlich" }
+  },
+  {
+    "key": "pragmatic",
+    "aliases": { "en": "Pragmatic", "zh": "务实的", "ja": "実用的な", "fr": "Pragmatique", "es": "Pragmático", "de": "Pragmatisch" }
+  },
+  {
+    "key": "proactive",
+    "aliases": { "en": "Proactive", "zh": "积极主动的", "ja": "積極的な", "fr": "Proactif", "es": "Proactivo", "de": "Proaktiv" }
+  },
+  {
+    "key": "quality_focused",
+    "aliases": { "en": "Quality-focused", "zh": "注重质量的", "ja": "品質重視の", "fr": "Axé sur la qualité", "es": "Centrado en la calidad", "de": "Qualitätsorientiert" }
+  },
+  {
+    "key": "resourceful",
+    "aliases": { "en": "Resourceful", "zh": "善于解决问题的", "ja": "機知に富んだ", "fr": "Débrouillard", "es": "Ingenioso", "de": "Einfallsreich" }
+  },
+  {
+    "key": "results_driven",
+    "aliases": { "en": "Results-driven", "zh": "结果导向的", "ja": "結果重視の", "fr": "Axé sur les résultats", "es": "Orientado a resultados", "de": "Ergebnisorientiert" }
+  },
+  {
+    "key": "risk_taking",
+    "aliases": { "en": "Risk-taking", "zh": "敢于承担风险的", "ja": "リスクを恐れない", "fr": "Audacieux", "es": "Tomador de riesgos", "de": "Risikobereit" }
+  },
+  {
+    "key": "strategic",
+    "aliases": { "en": "Strategic", "zh": "有战略眼光的", "ja": "戦略的な", "fr": "Stratégique", "es": "Estratégico", "de": "Strategisch" }
+  },
+  {
+    "key": "time_conscious",
+    "aliases": { "en": "Time-conscious", "zh": "有时间观念的", "ja": "時間を守る", "fr": "Ponctuel", "es": "Puntual", "de": "Zeitbewusst" }
+  }
+]

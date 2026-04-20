@@ -1,0 +1,82 @@
+[
+  {
+    "key": "articulate",
+    "aliases": { "en": "Articulate", "zh": "表达清晰的", "ja": "明快に話す", "fr": "Articulé", "es": "Articulado", "de": "Wortgewandt" }
+  },
+  {
+    "key": "assertive",
+    "aliases": { "en": "Assertive", "zh": "坚定自信的", "ja": "自己主張の強い", "fr": "Affirmé", "es": "Asertivo", "de": "Durchsetzungsfähig" }
+  },
+  {
+    "key": "blunt",
+    "aliases": { "en": "Blunt", "zh": "直言不讳的", "ja": "ぶっきらぼうな", "fr": "Direct", "es": "Franco", "de": "Stumpf" }
+  },
+  {
+    "key": "concise",
+    "aliases": { "en": "Concise", "zh": "简明扼要的", "ja": "簡潔な", "fr": "Concis", "es": "Conciso", "de": "Prägnant" }
+  },
+  {
+    "key": "diplomatic",
+    "aliases": { "en": "Diplomatic", "zh": "委婉圆滑的", "ja": "外交的な", "fr": "Diplomate", "es": "Diplomático", "de": "Diplomatisch" }
+  },
+  {
+    "key": "direct",
+    "aliases": { "en": "Direct", "zh": "直接了当的", "ja": "直接的な", "fr": "Direct", "es": "Directo", "de": "Direkt" }
+  },
+  {
+    "key": "empathetic_listener",
+    "aliases": { "en": "Empathetic Listener", "zh": "善于倾听共情的", "ja": "共感的な聞き手", "fr": "Auditeur empathique", "es": "Oyente empático", "de": "Empathischer Zuhörer" }
+  },
+  {
+    "key": "expressive",
+    "aliases": { "en": "Expressive", "zh": "善于表现的/表情丰富的", "ja": "表情豊かな", "fr": "Expressif", "es": "Expresivo", "de": "Ausdrucksstark" }
+  },
+  {
+    "key": "formal",
+    "aliases": { "en": "Formal", "zh": "正式严谨的", "ja": "フォーマルな", "fr": "Formel", "es": "Formal", "de": "Formell" }
+  },
+  {
+    "key": "humorous",
+    "aliases": { "en": "Humorous", "zh": "幽默风趣的", "ja": "ユーモアのある", "fr": "Humoristique", "es": "Humorístico", "de": "Humorvoll" }
+  },
+  {
+    "key": "indirect",
+    "aliases": { "en": "Indirect", "zh": "含蓄的/间接的", "ja": "遠回しな", "fr": "Indirect", "es": "Indirecto", "de": "Indirekt" }
+  },
+  {
+    "key": "informal",
+    "aliases": { "en": "Informal", "zh": "非正式的/随和的", "ja": "インフォーマルな", "fr": "Informel", "es": "Informal", "de": "Informell" }
+  },
+  {
+    "key": "objective",
+    "aliases": { "en": "Objective", "zh": "客观中立的", "ja": "客観的な", "fr": "Objectif", "es": "Objetivo", "de": "Objektiv" }
+  },
+  {
+    "key": "passive",
+    "aliases": { "en": "Passive", "zh": "顺从被动的", "ja": "受動的な", "fr": "Passif", "es": "Pasivo", "de": "Passiv" }
+  },
+  {
+    "key": "passive_aggressive",
+    "aliases": { "en": "Passive-aggressive", "zh": "消极抵抗的", "ja": "受動的攻撃型の", "fr": "Passif-agressif", "es": "Pasivo-agresivo", "de": "Passiv-aggressiv" }
+  },
+  {
+    "key": "persuasive",
+    "aliases": { "en": "Persuasive", "zh": "有说服力的", "ja": "説得力のある", "fr": "Persuasif", "es": "Persuasivo", "de": "Überzeugend" }
+  },
+  {
+    "key": "soft_spoken",
+    "aliases": { "en": "Soft-spoken", "zh": "轻声细语的", "ja": "穏やかに話す", "fr": "À la voix douce", "es": "De voz suave", "de": "Leise sprechend" }
+  },
+  {
+    "key": "storyteller",
+    "aliases": { "en": "Storyteller", "zh": "善于讲故事的", "ja": "ストーリーテラー", "fr": "Conteur", "es": "Narrador", "de": "Geschichtenerzähler" }
+  },
+  {
+    "key": "tactful",
+    "aliases": { "en": "Tactful", "zh": "得体的/机敏的", "ja": "機転の利く", "fr": "Plein de tact", "es": "Discreto", "de": "Taktvoll" }
+  },
+  {
+    "key": "verbose",
+    "aliases": { "en": "Verbose", "zh": "啰嗦的/冗长的", "ja": "冗長な", "fr": "Verbeux", "es": "Locuaz", "de": "Wortreich" }
+  }
+]

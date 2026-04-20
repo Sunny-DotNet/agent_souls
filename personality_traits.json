@@ -1,0 +1,82 @@
+[
+  {
+    "key": "adaptable",
+    "aliases": { "en": "Adaptable", "zh": "适应力强的", "ja": "適応力のある", "fr": "Adaptable", "es": "Adaptable", "de": "Anpassungsfähig" }
+  },
+  {
+    "key": "ambitious",
+    "aliases": { "en": "Ambitious", "zh": "有野心的", "ja": "野心的な", "fr": "Ambitieux", "es": "Ambicioso", "de": "Ehrgeizig" }
+  },
+  {
+    "key": "analytical",
+    "aliases": { "en": "Analytical", "zh": "善于分析的", "ja": "分析的な", "fr": "Analytique", "es": "Analítico", "de": "Analytisch" }
+  },
+  {
+    "key": "charismatic",
+    "aliases": { "en": "Charismatic", "zh": "有魅力的", "ja": "カリスマ性のある", "fr": "Charismatique", "es": "Carismático", "de": "Charismatisch" }
+  },
+  {
+    "key": "compassionate",
+    "aliases": { "en": "Compassionate", "zh": "有同情心的", "ja": "思いやりのある", "fr": "Compatissant", "es": "Compasivo", "de": "Mitfühlend" }
+  },
+  {
+    "key": "confident",
+    "aliases": { "en": "Confident", "zh": "自信的", "ja": "自信に満ちた", "fr": "Confiant", "es": "Seguro de sí mismo", "de": "Selbstbewusst" }
+  },
+  {
+    "key": "courageous",
+    "aliases": { "en": "Courageous", "zh": "勇敢的", "ja": "勇敢な", "fr": "Courageux", "es": "Valiente", "de": "Mutig" }
+  },
+  {
+    "key": "creative",
+    "aliases": { "en": "Creative", "zh": "有创造力的", "ja": "創造的な", "fr": "Créatif", "es": "Creativo", "de": "Kreativ" }
+  },
+  {
+    "key": "curious",
+    "aliases": { "en": "Curious", "zh": "好奇的", "ja": "好奇心旺盛な", "fr": "Curieux", "es": "Curioso", "de": "Neugierig" }
+  },
+  {
+    "key": "empathetic",
+    "aliases": { "en": "Empathetic", "zh": "善解人意的", "ja": "共感的な", "fr": "Empathique", "es": "Empático", "de": "Empathisch" }
+  },
+  {
+    "key": "extroverted",
+    "aliases": { "en": "Extroverted", "zh": "外向的", "ja": "外向的な", "fr": "Extraverti", "es": "Extrovertido", "de": "Extrovertiert" }
+  },
+  {
+    "key": "honest",
+    "aliases": { "en": "Honest", "zh": "诚实的", "ja": "正直な", "fr": "Honnête", "es": "Honesto", "de": "Ehrlich" }
+  },
+  {
+    "key": "humble",
+    "aliases": { "en": "Humble", "zh": "谦逊的", "ja": "謙虚な", "fr": "Humble", "es": "Humilde", "de": "Bescheiden" }
+  },
+  {
+    "key": "independent",
+    "aliases": { "en": "Independent", "zh": "独立的", "ja": "独立した", "fr": "Indépendant", "es": "Independiente", "de": "Unabhängig" }
+  },
+  {
+    "key": "introverted",
+    "aliases": { "en": "Introverted", "zh": "内向的", "ja": "内向的な", "fr": "Introverti", "es": "Introvertido", "de": "Introvertiert" }
+  },
+  {
+    "key": "loyal",
+    "aliases": { "en": "Loyal", "zh": "忠诚的", "ja": "忠実な", "fr": "Fidèle", "es": "Leal", "de": "Loyal" }
+  },
+  {
+    "key": "open_minded",
+    "aliases": { "en": "Open-minded", "zh": "思想开明的", "ja": "心が広い", "fr": "Ouvert d'esprit", "es": "De mente abierta", "de": "Aufgeschlossen" }
+  },
+  {
+    "key": "patient",
+    "aliases": { "en": "Patient", "zh": "有耐心的", "ja": "忍耐強い", "fr": "Patient", "es": "Paciente", "de": "Geduldig" }
+  },
+  {
+    "key": "resilient",
+    "aliases": { "en": "Resilient", "zh": "有韧性的", "ja": "回復力のある", "fr": "Résilient", "es": "Resiliente", "de": "Belastbar" }
+  },
+  {
+    "key": "stubborn",
+    "aliases": { "en": "Stubborn", "zh": "固执的", "ja": "頑固な", "fr": "Têtu", "es": "Terco", "de": "Hartnäckig" }
+  }
+]
